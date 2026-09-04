@@ -1,0 +1,951 @@
+/* ==========================================================
+GLOBAL
+========================================================== */
+
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+
+        #f4f6f8;
+
+    color:
+
+        #1f2937;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+}
+
+
+/* ==========================================================
+NAVIGATION
+========================================================== */
+
+
+.navbar {
+
+    background:
+
+        #1f2937;
+
+    padding:
+
+        18px 8%;
+
+    display:
+
+        flex;
+
+    justify-content:
+
+        space-between;
+
+    align-items:
+
+        center;
+
+    flex-wrap:
+
+        wrap;
+
+    gap:
+
+        15px;
+
+}
+
+
+.logo {
+
+    color:
+
+        white;
+
+    font-size:
+
+        20px;
+
+    font-weight:
+
+        bold;
+
+}
+
+
+.nav-links {
+
+    display:
+
+        flex;
+
+    gap:
+
+        22px;
+
+}
+
+
+.nav-links a {
+
+    color:
+
+        white;
+
+    font-size:
+
+        16px;
+
+}
+
+
+/* ==========================================================
+CONTAINER
+========================================================== */
+
+
+.container {
+
+    width:
+
+        88%;
+
+    max-width:
+
+        1300px;
+
+    margin:
+
+        auto;
+
+    padding:
+
+        40px 0;
+
+}
+
+
+/* ==========================================================
+HERO
+========================================================== */
+
+
+.hero {
+
+    min-height:
+
+        380px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #1f2937,
+            #4b5563
+        );
+
+    border-radius:
+
+        18px;
+
+    display:
+
+        flex;
+
+    align-items:
+
+        center;
+
+    justify-content:
+
+        center;
+
+    text-align:
+
+        center;
+
+    color:
+
+        white;
+
+    padding:
+
+        50px 20px;
+
+    margin-bottom:
+
+        50px;
+
+}
+
+
+.hero-content {
+
+    max-width:
+
+        750px;
+
+}
+
+
+.hero h1 {
+
+    font-size:
+
+        48px;
+
+    margin-bottom:
+
+        20px;
+
+}
+
+
+.hero p {
+
+    font-size:
+
+        20px;
+
+    margin-bottom:
+
+        30px;
+
+}
+
+
+/* ==========================================================
+BUTTONS
+========================================================== */
+
+
+.button {
+
+    display:
+
+        inline-block;
+
+    padding:
+
+        12px 20px;
+
+    background:
+
+        #1f2937;
+
+    color:
+
+        white;
+
+    border:
+
+        none;
+
+    border-radius:
+
+        8px;
+
+    cursor:
+
+        pointer;
+
+    font-size:
+
+        15px;
+
+    transition:
+
+        0.2s;
+
+}
+
+
+.button:hover {
+
+    transform:
+
+        translateY(-2px);
+
+}
+
+
+.big-button {
+
+    padding:
+
+        15px 28px;
+
+    font-size:
+
+        17px;
+
+}
+
+
+.remove-button {
+
+    background:
+
+        #b91c1c;
+
+}
+
+
+.whatsapp {
+
+    background:
+
+        #25D366;
+
+}
+
+
+/* ==========================================================
+SECTION TITLE
+========================================================== */
+
+
+.section-title {
+
+    margin-top:
+
+        50px;
+
+    margin-bottom:
+
+        25px;
+
+}
+
+
+/* ==========================================================
+PRODUCT GRID
+========================================================== */
+
+
+.grid {
+
+    display:
+
+        grid;
+
+    grid-template-columns:
+
+        repeat(
+            auto-fit,
+            minmax(230px, 1fr)
+        );
+
+    gap:
+
+        25px;
+
+}
+
+
+.card {
+
+    background:
+
+        white;
+
+    padding:
+
+        15px;
+
+    border-radius:
+
+        14px;
+
+    box-shadow:
+
+        0 5px 20px
+
+        rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+
+}
+
+
+.card img {
+
+    width:
+
+        100%;
+
+    height:
+
+        230px;
+
+    object-fit:
+
+        cover;
+
+    border-radius:
+
+        10px;
+
+}
+
+
+/* ==========================================================
+FILTER
+========================================================== */
+
+
+.filter-box {
+
+    background:
+
+        white;
+
+    padding:
+
+        25px;
+
+    border-radius:
+
+        12px;
+
+    margin-bottom:
+
+        35px;
+
+    display:
+
+        grid;
+
+    grid-template-columns:
+
+        repeat(
+            auto-fit,
+            minmax(180px, 1fr)
+        );
+
+    gap:
+
+        15px;
+
+}
+
+
+/* ==========================================================
+FORMS
+========================================================== */
+
+
+input,
+select,
+textarea {
+
+    width:
+
+        100%;
+
+    padding:
+
+        13px;
+
+    border:
+
+        1px solid #d1d5db;
+
+    border-radius:
+
+        8px;
+
+    font-size:
+
+        15px;
+
+}
+
+
+textarea {
+
+    min-height:
+
+        120px;
+
+    resize:
+
+        vertical;
+
+}
+
+
+label {
+
+    display:
+
+        block;
+
+    margin-top:
+
+        15px;
+
+    margin-bottom:
+
+        7px;
+
+    font-weight:
+
+        bold;
+
+}
+
+
+/* ==========================================================
+PRODUCT DETAIL
+========================================================== */
+
+
+.detail-card {
+
+    background:
+
+        white;
+
+    padding:
+
+        35px;
+
+    border-radius:
+
+        18px;
+
+    display:
+
+        grid;
+
+    grid-template-columns:
+
+        1fr 1fr;
+
+    gap:
+
+        40px;
+
+}
+
+
+.detail-image {
+
+    width:
+
+        100%;
+
+    height:
+
+        500px;
+
+    object-fit:
+
+        cover;
+
+    border-radius:
+
+        12px;
+
+}
+
+
+.category-label {
+
+    display:
+
+        inline-block;
+
+    padding:
+
+        7px 12px;
+
+    background:
+
+        #e5e7eb;
+
+    border-radius:
+
+        20px;
+
+}
+
+
+/* ==========================================================
+ENQUIRY
+========================================================== */
+
+
+.enquiry-layout {
+
+    display:
+
+        grid;
+
+    grid-template-columns:
+
+        1fr 1fr;
+
+    gap:
+
+        30px;
+
+}
+
+
+.selected-list {
+
+    background:
+
+        white;
+
+    padding:
+
+        25px;
+
+    border-radius:
+
+        14px;
+
+}
+
+
+.selected-product {
+
+    display:
+
+        flex;
+
+    gap:
+
+        15px;
+
+    align-items:
+
+        center;
+
+    padding:
+
+        12px 0;
+
+    border-bottom:
+
+        1px solid #e5e7eb;
+
+}
+
+
+.selected-product img {
+
+    width:
+
+        80px;
+
+    height:
+
+        80px;
+
+    object-fit:
+
+        cover;
+
+    border-radius:
+
+        8px;
+
+}
+
+
+.enquiry-form {
+
+    background:
+
+        white;
+
+    padding:
+
+        30px;
+
+    border-radius:
+
+        14px;
+
+}
+
+
+/* ==========================================================
+SELECTION ACTION
+========================================================== */
+
+
+.selection-action {
+
+    margin-top:
+
+        40px;
+
+    padding:
+
+        35px;
+
+    text-align:
+
+        center;
+
+    background:
+
+        white;
+
+    border-radius:
+
+        15px;
+
+}
+
+
+/* ==========================================================
+SUCCESS
+========================================================== */
+
+
+.success-box {
+
+    background:
+
+        white;
+
+    max-width:
+
+        700px;
+
+    margin:
+
+        50px auto;
+
+    padding:
+
+        60px 30px;
+
+    text-align:
+
+        center;
+
+    border-radius:
+
+        18px;
+
+}
+
+
+.success-icon {
+
+    width:
+
+        70px;
+
+    height:
+
+        70px;
+
+    margin:
+
+        auto;
+
+    margin-bottom:
+
+        20px;
+
+    border-radius:
+
+        50%;
+
+    display:
+
+        flex;
+
+    align-items:
+
+        center;
+
+    justify-content:
+
+        center;
+
+    background:
+
+        #22c55e;
+
+    color:
+
+        white;
+
+    font-size:
+
+        40px;
+
+}
+
+
+/* ==========================================================
+EMPTY MESSAGE
+========================================================== */
+
+
+.empty-message {
+
+    background:
+
+        white;
+
+    padding:
+
+        50px;
+
+    border-radius:
+
+        15px;
+
+    text-align:
+
+        center;
+
+}
+
+
+/* ==========================================================
+FOOTER
+========================================================== */
+
+
+footer {
+
+    background:
+
+        #1f2937;
+
+    color:
+
+        white;
+
+    text-align:
+
+        center;
+
+    padding:
+
+        35px;
+
+    margin-top:
+
+        60px;
+
+}
+
+
+/* ==========================================================
+MOBILE
+========================================================== */
+
+
+@media (max-width: 800px) {
+
+
+    .navbar {
+
+        flex-direction:
+
+            column;
+
+    }
+
+
+    .nav-links {
+
+        flex-wrap:
+
+            wrap;
+
+        justify-content:
+
+            center;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+
+            32px;
+
+    }
+
+
+    .hero p {
+
+        font-size:
+
+            17px;
+
+    }
+
+
+    .detail-card {
+
+        grid-template-columns:
+
+            1fr;
+
+    }
+
+
+    .detail-image {
+
+        height:
+
+            350px;
+
+    }
+
+
+    .enquiry-layout {
+
+        grid-template-columns:
+
+            1fr;
+
+    }
+
+
+}

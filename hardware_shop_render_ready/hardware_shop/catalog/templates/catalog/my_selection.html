@@ -1,0 +1,146 @@
+{% extends "catalog/base.html" %}
+
+
+{% block content %}
+
+
+<h1>
+
+    ❤️ My Selected Designs
+
+</h1>
+
+
+<p>
+
+    Select your favourite designs and send
+    them directly to our shop.
+
+</p>
+
+
+
+<div class="grid">
+
+
+{% for product in products %}
+
+
+<div class="card">
+
+
+    <img
+
+        src="{{ product.image.url }}"
+
+        alt="{{ product.name }}"
+
+    >
+
+
+    <h3>
+
+        {{ product.name }}
+
+    </h3>
+
+
+    <p>
+
+        {{ product.category.name }}
+
+    </p>
+
+
+    <a
+
+        href="{% url 'remove_from_selection' product.id %}"
+
+        class="button remove-button"
+
+    >
+
+        Remove
+
+    </a>
+
+
+</div>
+
+
+{% empty %}
+
+
+<div class="empty-message">
+
+
+    <h2>
+
+        No designs selected yet ❤️
+
+    </h2>
+
+
+    <p>
+
+        Browse our products and choose your favourite designs.
+
+    </p>
+
+
+    <a
+
+        href="{% url 'products' %}"
+
+        class="button"
+
+    >
+
+        Browse Designs
+
+    </a>
+
+
+</div>
+
+
+{% endfor %}
+
+
+</div>
+
+
+
+{% if products %}
+
+
+<div class="selection-action">
+
+
+    <h2>
+
+        Ready to send your selection?
+
+    </h2>
+
+
+    <a
+
+        href="{% url 'enquiry' %}"
+
+        class="button big-button"
+
+    >
+
+        Send Selection to Shop
+
+    </a>
+
+
+</div>
+
+
+{% endif %}
+
+
+{% endblock %}

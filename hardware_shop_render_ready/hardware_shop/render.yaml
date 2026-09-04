@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: hardware-plywood-shop
+    runtime: python
+    buildCommand: ./build.sh
+    startCommand: gunicorn hardware_shop.wsgi:application
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true

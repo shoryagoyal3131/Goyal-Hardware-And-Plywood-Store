@@ -1,0 +1,147 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+
+
+    <meta
+
+        name="viewport"
+
+        content="width=device-width, initial-scale=1.0"
+
+    >
+
+
+    <title>
+
+        Hardware & Plywood Shop
+
+    </title>
+
+
+    <link
+
+        rel="stylesheet"
+
+        href="{% static 'css/style.css' %}"
+
+    >
+
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+NAVIGATION
+===================================================== -->
+
+
+<nav class="navbar">
+
+
+    <a
+
+        href="{% url 'home' %}"
+
+        class="logo"
+
+    >
+
+        🪵 HARDWARE & PLYWOOD SHOP
+
+    </a>
+
+
+    <div class="nav-links">
+
+
+        <a href="{% url 'home' %}">
+
+            Home
+
+        </a>
+
+
+        <a href="{% url 'products' %}">
+
+            Browse Designs
+
+        </a>
+
+
+        <a href="{% url 'my_selection' %}">
+
+            ❤️ My Selection
+
+        </a>
+
+
+    </div>
+
+
+</nav>
+
+
+<!-- =====================================================
+MAIN CONTENT
+===================================================== -->
+
+
+<main class="container">
+
+
+    {% block content %}
+
+
+    {% endblock %}
+
+
+</main>
+
+
+<!-- =====================================================
+FOOTER
+===================================================== -->
+
+
+<footer>
+
+
+    <h3>
+
+        Hardware & Plywood Shop
+
+    </h3>
+
+
+    <p>
+
+        Plywood • Laminates • Hardware • Handles • Interior Designs
+
+    </p>
+
+
+    <p>
+
+        © 2026 Your Shop
+
+    </p>
+
+
+</footer>
+
+
+</body>
+
+
+</html>

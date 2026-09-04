@@ -1,0 +1,223 @@
+{% extends "catalog/base.html" %}
+
+
+{% block content %}
+
+
+<h1>
+
+    Send Your Design Selection
+
+</h1>
+
+
+
+<div class="enquiry-layout">
+
+
+    <!-- SELECTED PRODUCTS -->
+
+
+    <div class="selected-list">
+
+
+        <h2>
+
+            Your Selected Designs
+
+        </h2>
+
+
+        {% for product in products %}
+
+
+        <div class="selected-product">
+
+
+            <img
+
+                src="{{ product.image.url }}"
+
+                alt="{{ product.name }}"
+
+            >
+
+
+            <div>
+
+
+                <strong>
+
+                    {{ product.name }}
+
+                </strong>
+
+
+                <p>
+
+                    {{ product.category.name }}
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+        {% endfor %}
+
+
+    </div>
+
+
+
+    <!-- CUSTOMER FORM -->
+
+
+    <form
+
+        method="POST"
+
+        class="enquiry-form"
+
+    >
+
+
+        {% csrf_token %}
+
+
+
+        <h2>
+
+            Your Contact Details
+
+        </h2>
+
+
+
+        <label>
+
+            Full Name *
+
+        </label>
+
+
+        <input
+
+            type="text"
+
+            name="name"
+
+            required
+
+        >
+
+
+
+        <label>
+
+            Phone Number *
+
+        </label>
+
+
+        <input
+
+            type="tel"
+
+            name="phone"
+
+            required
+
+        >
+
+
+
+        <label>
+
+            Email
+
+        </label>
+
+
+        <input
+
+            type="email"
+
+            name="email"
+
+        >
+
+
+
+        <label>
+
+            City
+
+        </label>
+
+
+        <input
+
+            type="text"
+
+            name="city"
+
+        >
+
+
+
+        <label>
+
+            Address
+
+        </label>
+
+
+        <textarea
+
+            name="address"
+
+        ></textarea>
+
+
+
+        <label>
+
+            Additional Requirements
+
+        </label>
+
+
+        <textarea
+
+            name="message"
+
+            placeholder="Example: I need these designs for a modular kitchen..."
+
+        ></textarea>
+
+
+
+        <button
+
+            type="submit"
+
+            class="button big-button"
+
+        >
+
+            Submit Enquiry
+
+        </button>
+
+
+    </form>
+
+
+</div>
+
+
+{% endblock %}

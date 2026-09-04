@@ -1,0 +1,208 @@
+{% extends "catalog/base.html" %}
+
+
+{% block content %}
+
+
+<div class="detail-card">
+
+
+    <div>
+
+
+        <img
+
+            class="detail-image"
+
+            src="{{ product.image.url }}"
+
+            alt="{{ product.name }}"
+
+        >
+
+
+    </div>
+
+
+
+    <div>
+
+
+        <p class="category-label">
+
+            {{ product.category.name }}
+
+        </p>
+
+
+        <h1>
+
+            {{ product.name }}
+
+        </h1>
+
+
+        <p>
+
+            {{ product.description }}
+
+        </p>
+
+
+
+        {% if product.brand %}
+
+
+        <p>
+
+            <strong>
+
+                Brand:
+
+            </strong>
+
+            {{ product.brand }}
+
+        </p>
+
+
+        {% endif %}
+
+
+
+        {% if product.color %}
+
+
+        <p>
+
+            <strong>
+
+                Colour:
+
+            </strong>
+
+            {{ product.color }}
+
+        </p>
+
+
+        {% endif %}
+
+
+
+        {% if product.finish %}
+
+
+        <p>
+
+            <strong>
+
+                Finish:
+
+            </strong>
+
+            {{ product.finish }}
+
+        </p>
+
+
+        {% endif %}
+
+
+
+        {% if product.thickness %}
+
+
+        <p>
+
+            <strong>
+
+                Thickness:
+
+            </strong>
+
+            {{ product.thickness }}
+
+        </p>
+
+
+        {% endif %}
+
+
+
+        {% if product.size %}
+
+
+        <p>
+
+            <strong>
+
+                Size:
+
+            </strong>
+
+            {{ product.size }}
+
+        </p>
+
+
+        {% endif %}
+
+
+
+        {% if product.price %}
+
+
+        <h2>
+
+            ₹{{ product.price }}
+
+        </h2>
+
+
+        {% endif %}
+
+
+
+        {% if is_selected %}
+
+
+        <a
+
+            href="{% url 'my_selection' %}"
+
+            class="button"
+
+        >
+
+            ❤️ Already Selected
+
+        </a>
+
+
+        {% else %}
+
+
+        <a
+
+            href="{% url 'add_to_selection' product.id %}"
+
+            class="button"
+
+        >
+
+            ❤️ Select This Design
+
+        </a>
+
+
+        {% endif %}
+
+
+    </div>
+
+
+</div>
+
+
+{% endblock %}
